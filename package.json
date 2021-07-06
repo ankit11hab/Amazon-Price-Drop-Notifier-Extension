@@ -1,0 +1,14 @@
+{
+  "name": "nodejspractice",
+  "version": "1.0.0",
+  "description": "installed for practice purposes",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Ankit Guha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
