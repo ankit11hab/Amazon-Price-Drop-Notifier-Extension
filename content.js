@@ -1,1 +1,1 @@
-console.log("Hi there!");
+console.log("From content script!");
