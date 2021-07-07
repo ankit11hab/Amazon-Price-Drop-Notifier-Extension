@@ -1,5 +1,19 @@
 const express = require('express'); // importing express modules
+const mongoose = require('mongoose');
 const app = express();
+
+
+// connect to mongoDB
+const dbURI = 'mongodb+srv://ankit11hab:AnkitGuha@cluster0.uzilj.mongodb.net/AmazonData?retryWrites=true&w=majority'; 
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+.then((result) =>
+{
+  console.log("Database is connected");
+})
+.catch((error) =>
+{
+  console.log("An error has occured!");
+})
 
 app.get("/", (request,response)=>
 {
@@ -13,6 +27,6 @@ app.post("/", (request, response) => {
 
 app.listen(3000, function()
 {
-    console.log("Server started at port 3000! (Console log through listen function)");
+    console.log("Server started on port 3000!");
 })
 
