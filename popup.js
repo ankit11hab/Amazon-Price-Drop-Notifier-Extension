@@ -1,9 +1,19 @@
-const back = document.getElementById('back');
-const times = document.getElementById('times');
-var i = 0;
-back.addEventListener('click', ()=>
+let amazonextension = angular.module("amazonextension", ['ui.router']);
+
+amazonextension.config(['$stateProvider', function($stateProvider)
 {
-    i++;
-    times.innerHTML = i;
-    console.log(i);
-});
+    $stateProvider
+    .state('Home',
+    {
+        url: '/home',
+        templateUrl: 'home.html',
+        controller: 'home'
+    })
+    .state('Login',
+    {
+        url: '/login',
+        templateUrl: 'login.html',
+        controller: 'login'
+    });
+}]);
+
