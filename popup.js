@@ -1,19 +1,26 @@
 let amazonextension = angular.module("amazonextension", ['ui.router']);
 
-amazonextension.config(['$stateProvider', function($stateProvider)
+amazonextension.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider)
 {
     $stateProvider
-    .state('Home',
+    .state('home',
     {
         url: '/home',
         templateUrl: 'home.html',
         controller: 'home'
     })
-    .state('Login',
+    .state('login',
     {
         url: '/login',
         templateUrl: 'login.html',
         controller: 'login'
+    })
+    .state('root',
+    {
+        url: '/',
+        templateUrl: 'home.html',
+        controller: 'home'
     });
+    $urlRouterProvider.otherwise('home');
 }]);
 
