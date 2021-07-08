@@ -1,4 +1,4 @@
-chrome.browserAction.onClicked.addListener(buttonClicked);
+/* chrome.browserAction.onClicked.addListener(buttonClicked);
 
 function buttonClicked() {
     $.ajax(
@@ -14,4 +14,8 @@ function buttonClicked() {
             }
         }
     );
-}
+} */
+
+console.log("Hi this is background js text!");
+console.log("Email: ", email);
+console.log("Password: ", password);

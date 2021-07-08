@@ -21,6 +21,16 @@ amazonextension.config(['$stateProvider', '$urlRouterProvider', function($stateP
         templateUrl: 'home.html',
         controller: 'home'
     });
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('login');
 }]);
+
+var email;
+var password;
+function formRecord()
+{
+    email = document.getElementById("exampleInputEmail1").value;
+    console.log(email);
+    password = document.getElementById("exampleInputPassword1").value;
+    console.log(password);
+}
 
