@@ -17,5 +17,9 @@ function buttonClicked() {
 } */
 
 console.log("Hi this is background js text!");
-console.log("Email: ", email);
-console.log("Password: ", password);
+
+chrome.runtime.onMessage.addListener((response, sender, sendResponse)=>
+{
+    console.log(response);
+});
+

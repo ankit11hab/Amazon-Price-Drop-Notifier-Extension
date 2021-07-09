@@ -32,5 +32,7 @@ function formRecord()
     console.log(email);
     password = document.getElementById("exampleInputPassword1").value;
     console.log(password);
+    chrome.runtime.sendMessage("Hello");
+    
 }
 
